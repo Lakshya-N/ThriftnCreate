@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell - Thrift and Create</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Navigation bar -->
+        <nav>
+            <ul>
+                <li><a href="index.html#thrift">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Section for selling items -->
+    <section>
+        <h2>Sell</h2>
+
+        <!-- Form for selling an item -->
+        <form id="sellForm" onsubmit="submitForm(event)">
+            <!-- Item name input -->
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" name="itemName" required><br><br>
+
+            <!-- Item description input -->
+            <label for="itemDescription">Item Description:</label><br>
+            <textarea id="itemDescription" name="itemDescription" rows="4" cols="50" required></textarea><br><br>
+
+            <!-- Item condition dropdown -->
+            <label for="itemCondition">Item Condition:</label>
+            <select id="itemCondition" name="itemCondition" required>
+                <option value="new">New with tags</option>
+                <option value="good">Good condition</option>
+                <option value="fair">Fair condition</option>
+                <option value="poor">Poor condition</option>
+            </select><br><br>
+
+            <!-- Item size input -->
+            <label for="itemSize">Size:</label>
+            <input type="text" id="itemSize" name="itemSize" required><br><br>
+
+            <!-- File upload for item image -->
+            <label for="itemImage">Upload Image:</label>
+            <input type="file" id="itemImage" name="itemImage" accept="image/*"><br><br>
+
+            <!-- Submit button -->
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Submission result message -->
+        <div id="submissionResult" style="display: none;">
+            <p>Your submission has been received.</p>
+            <p>We will assign a person to check the condition of your clothes.</p>
+            <p>If selected, you will be eligible for a reward!</p>
+        </div>
+    </section>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="scripts.js"></script>
+    <!-- Inline JavaScript for form submission handling -->
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+
+            // Hide the form and show the submission result message
+            document.getElementById('sellForm').style.display = 'none';
+            document.getElementById('submissionResult').style.display = 'block';
+
+            // Handle file upload if an image is provided
+            const fileInput = document.getElementById('itemImage');
+            const imageFile = fileInput.files[0];
+            if (imageFile) {
+                // Simulate image upload delay
+                setTimeout(() => {
+                    alert('Image uploaded successfully!');
+                    // Additional image handling logic can go here
+                }, 1000); 
+            }
+        }
+    </script>
+</body>
+</html>

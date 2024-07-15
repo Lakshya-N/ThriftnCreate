@@ -1,0 +1,325 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif; /* Set font for the entire page */
+    background: #f2f2f2; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+#head {
+    color: #bd02bd; /* Purple text color */
+    font-size: 3rem; /* Large font size */
+    text-align: center;
+    font-weight: bold; /* Bold font weight */
+}
+
+/* Navigation styles */
+header nav ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0;
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center align items */
+    background: linear-gradient(to right, #ff66b2, #cc00cc); /* Gradient background */
+}
+
+header nav ul li {
+    margin: 0 10px; /* Spacing between navigation items */
+}
+
+header nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* White text color */
+    font-weight: bold; /* Bold font weight */
+    padding: 10px 20px; /* Padding inside each link */
+    display: block; /* Make links block-level */
+}
+
+header nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Light background on hover */
+}
+
+/* Section styles */
+section {
+    padding: 20px; /* Padding inside sections */
+    text-align: center; /* Center align text */
+}
+
+/* Trending carousel styles */
+.trending .carousel {
+    display: flex; /* Flexbox layout */
+    overflow-x: auto; /* Horizontal scroll */
+    scroll-snap-type: x mandatory; /* Mandatory snap points */
+    background: #ffe6f2; /* Light pink background */
+    padding: 20px 0; /* Padding top and bottom */
+}
+
+.trending .carousel img {
+    width: 300px; /* Fixed width for carousel images */
+    height: 400px; /* Fixed height for carousel images */
+    margin: 0 10px; /* Margin around carousel images */
+    scroll-snap-align: center; /* Center align snap points */
+    transition: transform 0.2s ease-in-out; /* Smooth transform transition */
+}
+
+.trending .carousel img:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Trending winner section styles */
+.trending .winner {
+    margin-top: 20px; /* Margin top */
+    background: #ff66b2; /* Pink background */
+    padding: 20px; /* Padding inside winner section */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.trending .winner img {
+    width: 100%; /* Full width image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.trending .winner p {
+    color: #fff; /* White text color */
+    font-weight: bold; /* Bold font weight */
+    margin: 10px 0 0; /* Margin top */
+}
+
+/* Button styles */
+button {
+    background: #ff66b2; /* Pink background */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding inside button */
+    cursor: pointer; /* Pointer cursor */
+    margin-top: 10px; /* Margin top */
+    border-radius: 5px; /* Rounded corners */
+}
+
+button:hover {
+    background: #cc00cc; /* Darker pink background on hover */
+}
+
+/* Product container styles */
+.product {
+    display: flex; /* Flexbox layout */
+    margin-bottom: 20px; /* Margin bottom */
+    border: 1px solid #ccc; /* Light border */
+    padding: 10px; /* Padding inside product container */
+}
+
+.product img {
+    width: 150px; /* Fixed width for product images */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Margin right */
+}
+
+.product .details {
+    flex: 1; /* Flex grow for details */
+}
+
+.product h3 {
+    font-size: 18px; /* Font size */
+    margin-bottom: 5px; /* Margin bottom */
+}
+
+.product p {
+    margin: 5px 0; /* Margin top and bottom */
+}
+
+.product .checked {
+    color: green; /* Green color for checked items */
+    font-weight: bold; /* Bold font weight */
+}
+
+.product .sizes {
+    font-style: italic; /* Italic text for sizes */
+}
+
+.product button {
+    background: #ff66b2; /* Pink background */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Padding inside button */
+    cursor: pointer; /* Pointer cursor */
+    border-radius: 3px; /* Rounded corners */
+}
+
+.product button:hover {
+    background: #cc00cc; /* Darker pink background on hover */
+}
+
+/* Guide container styles */
+.guide-container {
+    max-width: 800px; /* Maximum width */
+    margin: 50px auto; /* Margin top and bottom, center align */
+    padding: 20px; /* Padding inside guide container */
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Guide step styles */
+.guide-step {
+    margin-bottom: 30px; /* Margin bottom */
+}
+
+.guide-step h2 {
+    font-size: 1.5em; /* Larger font size */
+    margin-bottom: 15px; /* Margin bottom */
+    border-bottom: 2px solid #e0e0e0; /* Bottom border */
+    padding-bottom: 10px; /* Padding bottom */
+}
+
+.guide-step ol {
+    padding-left: 20px; /* Indentation for ordered list */
+    margin: 0; /* Remove default margin */
+}
+
+.guide-step li {
+    margin-bottom: 15px; /* Margin bottom */
+    padding-left: 10px; /* Indentation for list items */
+}
+
+/* Strong text styles */
+strong {
+    color: #d81b60; /* Pink color */
+}
+
+/* Ordered list marker styles */
+ol li::marker {
+    color: #d81b60; /* Pink color */
+    font-weight: bold; /* Bold font weight */
+}
+
+/* Gallery container styles */
+.gallery-container {
+    max-width: 1000px; /* Maximum width */
+    margin: 50px auto; /* Margin top and bottom, center align */
+    padding: 20px; /* Padding inside gallery container */
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center align text */
+}
+
+.gallery-container h1,
+.gallery-container h2 {
+    color: #5b4b8a; /* Purple text color */
+    margin-bottom: 20px; /* Margin bottom */
+}
+
+/* Gallery styles */
+.gallery {
+    display: flex; /* Flexbox layout */
+    flex-wrap: wrap; /* Wrap items */
+    justify-content: center; /* Center align items */
+    gap: 20px; /* Gap between items */
+}
+
+/* Gallery item styles */
+.gallery-item {
+    background-color: #f8f8f8; /* Light gray background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    overflow: hidden; /* Hide overflow */
+    width: 250px; /* Fixed width */
+    text-align: left; /* Left align text */
+    margin-bottom: 20px; /* Margin bottom */
+    position: relative; /* Relative positioning */
+}
+
+.gallery-item img {
+    width: 100%; /* Full width image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Entry description styles */
+.entry-description {
+    padding: 10px; /* Padding inside entry description */
+    font-size: 14px; /* Font size */
+}
+
+/* Engagement button styles */
+.vote-button,
+.like-button,
+.comment-button,
+.share-button {
+    background-color: #d81b60; /* Pink background */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    padding: 10px; /* Padding inside button */
+    margin: 10px; /* Margin around button */
+    cursor: pointer; /* Pointer cursor */
+    border-radius: 4px; /* Rounded corners */
+    width: calc(100% - 20px); /* Full width minus padding */
+}
+
+.vote-button:hover,
+.like-button:hover,
+.comment-button:hover,
+.share-button:hover {
+    background-color: #c2185b; /* Darker pink background on hover */
+}
+
+/* Engagement tools container styles */
+.engagement-tools {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between items */
+    padding: 10px; /* Padding inside engagement tools */
+}
+
+.engagement-tools button {
+    flex: 1; /* Flexible width */
+    margin: 0 5px; /* Margin around buttons */
+}
+
+/* Vote and like count styles */
+.vote-count,
+.like-count {
+    padding: 10px; /* Padding inside count */
+    font-size: 14px; /* Font size */
+    text-align: center; /* Center align text */
+}
+
+/* Comments section styles */
+.comments-section {
+    padding: 10px; /* Padding inside comments section */
+}
+
+.comments-section h3 {
+    font-size: 16px; /* Larger font size for comments section */
+    margin-bottom: 10px; /* Margin bottom */
+}
+
+.comments-list {
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.comments-list li {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 5px 10px; /* Padding inside list item */
+    margin-bottom: 5px; /* Margin bottom */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+}
+
+/* Voting criteria and rewards recognition styles */
+.voting-criteria,
+.rewards-recognition {
+    text-align: left; /* Left align text */
+    margin: 20px auto; /* Margin top and bottom, center align */
+    max-width: 800px; /* Maximum width */
+}
+
+.voting-criteria p,
+.rewards-recognition p {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 15px; /* Padding inside paragraphs */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+    line-height: 1.6; /* Line height */
+}

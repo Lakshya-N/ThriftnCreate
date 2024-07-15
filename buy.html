@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy - Thrift and Create</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Navigation bar -->
+        <nav>
+            <ul>
+                <li><a href="index.html#thrift">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section for displaying products available for purchase -->
+    <section>
+        <h2>Buy</h2>
+
+        <!-- Product 1 -->
+        <div class="product">
+            <!-- Product image -->
+            <img src="public/buy3.jpeg" alt="Product 1">
+            <!-- Product details -->
+            <div class="details">
+                <h3>Frock</h3>
+                <p>Cute Mini Frock</p>
+                <p>Price: ₹200</p>
+                <p>Quality Checked: <span class="checked">Yes</span></p>
+                <p>Sizes Available: <span class="sizes">S, M, L</span></p>
+                <!-- Button to add product to cart -->
+                <button onclick="addToCart('product1')">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <!-- Product image -->
+            <img src="public/buy2.jpg" alt="Product 2">
+            <!-- Product details -->
+            <div class="details">
+                <h3>Summer Dress</h3>
+                <p>Flowy summer beachy vibe dress.</p>
+                <p>Price: ₹300</p>
+                <p>Quality Checked: <span class="checked">Yes</span></p>
+                <p>Sizes Available: <span class="sizes">M, L</span></p>
+                <!-- Button to add product to cart -->
+                <button onclick="addToCart('product2')">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <!-- Product image -->
+            <img src="public/buy.jpg" alt="Product 3">
+            <!-- Product details -->
+            <div class="details">
+                <h3>White Half Shoulder Top</h3>
+                <p>Formal half shoulder top</p>
+                <p>Price: ₹299</p>
+                <p>Quality Checked: <span class="checked">Yes</span></p>
+                <p>Sizes Available: <span class="sizes">S, L</span></p>
+                <!-- Button to add product to cart -->
+                <button onclick="addToCart('product3')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="scripts.js"></script>
+    <!-- Inline JavaScript for adding products to the cart -->
+    <script>
+        function addToCart(productId) {
+            // Alert the user that the product has been added to the cart
+            alert(`Product with ID ${productId} added to cart.`);
+        }
+    </script>
+</body>
+</html>

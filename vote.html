@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Platform</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <!-- Navigation bar -->
+        <nav>
+            <ul>
+                <li><a href="index.html#thrift">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="gallery-container">
+        <!-- Main heading -->
+        <h1>Voting Platform</h1>
+        
+        <!-- Gallery section for entries -->
+        <section class="gallery">
+            <!-- Gallery item 1 -->
+            <div class="gallery-item">
+                <img src="public/sample1.jpg" alt="Entry 1">
+                <div class="entry-description">
+                    <p><strong>User Description:</strong> A chic summer outfit perfect for beach outings.</p>
+                </div>
+                <button class="vote-button">Vote</button>
+                <!-- Engagement tools section -->
+                <div class="engagement-tools">
+                    <button class="like-button">Like</button>
+                    <button class="comment-button">Comment</button>
+                    <button class="share-button">Share</button>
+                </div>
+                <!-- Vote count display -->
+                <div class="vote-count">Votes: 0</div>
+                <!-- Like count display -->
+                <div class="like-count">Likes: 0</div>
+                <!-- Comments section -->
+                <div class="comments-section">
+                    <h3>Comments:</h3>
+                    <ul class="comments-list"></ul>
+                </div>
+            </div>
+
+            <!-- Gallery item 2 -->
+            <div class="gallery-item">
+                <img src="public/sample2.jpg" alt="Entry 2">
+                <div class="entry-description">
+                    <p><strong>User Description:</strong> A trendy fall outfit with layered pieces.</p>
+                </div>
+                <button class="vote-button">Vote</button>
+                <div class="engagement-tools">
+                    <button class="like-button">Like</button>
+                    <button class="comment-button">Comment</button>
+                    <button class="share-button">Share</button>
+                </div>
+                <div class="vote-count">Votes: 0</div>
+                <div class="like-count">Likes: 0</div>
+                <div class="comments-section">
+                    <h3>Comments:</h3>
+                    <ul class="comments-list"></ul>
+                </div>
+            </div>
+
+            <!-- Gallery item 3 -->
+            <div class="gallery-item">
+                <img src="public/sample3.jpg" alt="Entry 3">
+                <div class="entry-description">
+                    <p><strong>User Description:</strong> Another stylish entry.</p>
+                </div>
+                <button class="vote-button">Vote</button>
+                <div class="engagement-tools">
+                    <button class="like-button">Like</button>
+                    <button class="comment-button">Comment</button>
+                    <button class="share-button">Share</button>
+                </div>
+                <div class="vote-count">Votes: 0</div>
+                <div class="like-count">Likes: 0</div>
+                <div class="comments-section">
+                    <h3>Comments:</h3>
+                    <ul class="comments-list"></ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section for voting criteria -->
+        <section class="voting-criteria">
+            <h2>Voting Criteria</h2>
+            <p>Optional categories or themes for each voting round (e.g., best summer outfit, most creative upcycle) to encourage diverse participation.</p>
+        </section>
+        
+        <!-- Section for rewards and recognition -->
+        <section class="rewards-recognition">
+            <h2>Rewards and Recognition</h2>
+            <p>Besides being featured, winners can receive gift cards, exclusive discounts, or even a feature in Myntra’s newsletter or blog.</p>
+        </section>
+    </div>
+
+    <!-- Script to handle interactions with jQuery -->
+    <script>
+        $(document).ready(function() {
+            // Function to handle voting button clicks
+            $('.vote-button').click(function() {
+                let voteCountDiv = $(this).siblings('.vote-count');
+                let currentVotes = parseInt(voteCountDiv.text().replace('Votes: ', ''));
+                voteCountDiv.text('Votes: ' + (currentVotes + 1));
+            });
+
+            // Function to handle like button clicks
+            $('.like-button').click(function() {
+                let likeCountDiv = $(this).closest('.gallery-item').find('.like-count');
+                let currentLikes = parseInt(likeCountDiv.text().replace('Likes: ', ''));
+                likeCountDiv.text('Likes: ' + (currentLikes + 1));
+            });
+
+            // Function to handle comment button clicks
+            $('.comment-button').click(function() {
+                let comment = prompt("Enter your comment:");
+                if (comment) {
+                    let commentsList = $(this).closest('.gallery-item').find('.comments-list');
+                    commentsList.append('<li>' + comment + '</li>');
+                    alert("Comment submitted!");
+                }
+            });
+
+            // Function to handle share button clicks
+            $('.share-button').click(function() {
+                alert("Shared!");
+            });
+        });
+    </script>
+</body>
+</html>
